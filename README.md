@@ -1,9 +1,8 @@
 # read-presonal-data
 
-## Task
+## Goal
 
-Task 1 - Extraction of Text and Identification of face in documents. Given a document of type PDF, PNG or JPG, the
-program should
+Extraction of Text and Identification of face in documents. Given a document of type PDF, PNG or JPG, the program should
 
 1. Extract all the text present in the document
 2. Classify if the document is Personal or Non-Personal
