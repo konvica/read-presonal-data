@@ -1,5 +1,16 @@
 # read-presonal-data
 
+Experimental application that can read PDF and JPG/PNG files and spot personal information or personal photo.
+
+PDF files are extracted with `pymupdf` library. Each page of pdf is processed sequentially. Named Entity Recognition NER
+using `spacy` and `presidio` is applied on the text of the whole page. Only english is supported. Supported entities are
+described [here](https://microsoft.github.io/presidio/supported_entities/). Detected entities and personal information
+are then visualized in streamlit app.
+
+Image files and any images extracted from PDF file are scanned for faces using `opencv` and its haarcascade_frontalface
+detector. Using `pytesseract` and `presidio` OCR with entity recognition is applied on text in image. Found faces and
+personal text data are highlighted with bounding boxes in the streamlit app.
+
 ## Goal
 
 Extraction of Text and Identification of face in documents. Given a document of type PDF, PNG or JPG, the program should
